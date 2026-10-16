@@ -1,13 +1,10 @@
 #ifndef CAMERA_H
 #define CAMERA_H
-
 #include "esp_camera.h"
-#include <stdbool.h>
 
-bool camera_init(void);
 
-camera_fb_t *camera_capture(void);
-
-void camera_release(camera_fb_t *frame);
+esp_err_t init_camera(void);
+camera_fb_t *camera_get_frame(void);
+void camera_release_frame(camera_fb_t *frame);
 
 #endif
