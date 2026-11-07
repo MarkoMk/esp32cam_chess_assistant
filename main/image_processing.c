@@ -1231,3 +1231,8 @@ esp_err_t extract_board_square(const uint8_t *warped_board, int row, int column,
 
     return ESP_OK;
 }
+
+int image_processing_last_corner_count(void)
+{
+    return corner_count;
+}
